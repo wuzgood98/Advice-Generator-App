@@ -98,12 +98,13 @@ body {
 }
 
 .attribution {
+    color: var(--light-cyan);
     font-size: 11px; 
     text-align: center; 
 }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: var(--neon-green); 
     text-decoration: none;
 }
 
