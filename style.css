@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    line-height: 1.5;
+    background: var(--dark-blue);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+
+.card {
+    background: var(--dark-grayish-blue);
+    padding: 2.5rem;
+    border-radius: .8rem;
+    max-width: 550px;
+    text-align: center;
+    position: relative;
+}
+
+.card-content .advice-id-text {
+    color: var(--neon-green);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: .8rem;
+    margin-bottom: 1.68rem;
+}
+
+.card-content .advice-text {
+    color: var(--light-cyan);
+    font-size: 1.75rem;
+    margin-bottom: 1.88rem;
+}
+
+.card-content .advice-text::before {
+    content: "❝";
+}
+
+.card-content .advice-text::after {
+    content: "❞";
+}
+
+.card-content {
+    margin-bottom: 1.68rem;
+}
+
+.card-content img {
+    width: 100%;
+}
+
+.dice-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dice-container .dice {
+    position: absolute;
+    background: var(--neon-green);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -1.8rem;
+}
+
+.dice-container .dice:hover {
+    box-shadow: 0 0 1rem var(--neon-green),
+            0 0 3rem var(--neon-green);
+}
+
+.dice img {
+    transition: transform .8s ease-in;
+}
+
+.dice img:hover {
+    transform: rotate(360deg);
+}
+
+.attribution {
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .card {
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .card {
+        padding: 2rem;
+        margin: 1rem;
+    }
+
+    .card-content .advice-text {
+        font-size: 1.4rem;
+        margin-bottom: .88rem;
+    }
+
+    .card-content {
+        margin-bottom: .68rem;
+    }
+
+    .card-content .advice-id-text {
+        margin-bottom: .88rem;
+    }
+
+    .attribution {
+        font-size: 9px; 
+        text-align: center; 
+    }
+}
